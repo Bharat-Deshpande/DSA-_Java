@@ -1,4 +1,4 @@
-package LinkedList;
+package AllLinkedList.CircularLinkedList.LinkedList;
  public class Main{
      public static void main(String[] args) {
          linkedlist list = new linkedlist();
