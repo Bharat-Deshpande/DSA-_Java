@@ -1,4 +1,4 @@
-package AllLinkedList.CircularLinkedList.DoublyLinkedList;
+package DoublyLinkedList;
 
 public class DLL {
 

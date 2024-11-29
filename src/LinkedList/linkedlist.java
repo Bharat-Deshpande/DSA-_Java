@@ -1,4 +1,6 @@
-package AllLinkedList.CircularLinkedList.LinkedList;
+package LinkedList;
+
+import java.util.LinkedList;
 
 public class linkedlist {
 
