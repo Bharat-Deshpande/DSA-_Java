@@ -53,6 +53,21 @@ public class linkedlist {
         size++;
     }
 
+
+    // insert using recursion
+//    public void insertRec(int val, int index){
+//        head = insertRec(val,index,head);
+//    }
+//    private Node insertRec(int val, int index, Node node){
+//        if (index == 0){
+//            Node temp = new Node(val,node);
+//            size++;
+//            return temp;
+//        }
+//        node.next = insertRec(val,index--,node.next);
+//        return node;
+//    }
+
     public int deleteFirst(){
         int value = head.value;
         head = head.next;
@@ -128,6 +143,104 @@ public class linkedlist {
             this.value = value;
             this.next = next;
         }
+    }
+
+    //questions
+    public void duplicates(){
+        Node node = head;
+        while(node.next!= null){
+            if(node.value == node.next.value){
+                node.next = node.next.next;
+                size--;
+            }
+            else {
+                node = node.next;
+            }
+        }
+        tail = node;
+        tail.next = null;
+    }
+
+
+    public static linkedlist mergeTwoSortedList(linkedlist first, linkedlist second){
+        Node f = first.head;
+        Node s = second.head;
+        linkedlist ans = new linkedlist();
+        while(f != null && s != null){
+            if(f.value < s.value){
+                ans.insertLast(f.value);
+                f = f.next;
+            }else{
+                ans.insertLast(s.value);
+                s = s.next;
+            }
+        }
+        while(f!=null){
+            ans.insertLast(f.value);
+            f = f.next;
+        }
+        while(s!=null){
+            ans.insertLast(s.value);
+            s = s.next;
+        }
+        return ans;
+
+    }
+
+    //LinkedList cycle detection
+    public boolean hasCycle(Node head) {
+        Node fast = head;
+        Node slow = head;
+        while(fast != null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
+            if(fast == slow) return true;
+        }
+        return false;
+    }
+
+
+    //Length of a cycle in a linked list
+    public int CycleLength(Node head) {
+        Node fast = head;
+        Node slow = head;
+        while(fast != null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
+            if(fast == slow){
+                //calculate the length
+                Node temp = slow;
+                int length = 0;
+                do{
+                    temp = temp.next;
+                    length++;
+                }while(temp!=slow);
+                return length;
+            }
+        }
+        return 0;
+    }
+
+
+
+
+
+    public static void main(String[] args) {
+       linkedlist first = new linkedlist();
+       linkedlist second = new linkedlist();
+
+       first.insertLast(1);
+       first.insertLast(3);
+       first.insertLast(5);
+
+       second.insertLast(1);
+       second.insertLast(2);
+       second.insertLast(9);
+       second.insertLast(14);
+
+       linkedlist ans = linkedlist.mergeTwoSortedList(first,second);
+       ans.display();
+
     }
 }
 
