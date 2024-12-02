@@ -203,7 +203,7 @@ public class linkedlist {
 
 
     //Length of a cycle in a linked list
-    public int CycleLength(Node head) {
+    public int findCycleLength(Node head) {
         Node fast = head;
         Node slow = head;
         while(fast != null && fast.next != null){
