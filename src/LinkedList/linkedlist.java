@@ -146,6 +146,7 @@ public class linkedlist {
     }
 
     //questions
+    // remove duplicates
     public void duplicates(){
         Node node = head;
         while(node.next!= null){
@@ -162,6 +163,7 @@ public class linkedlist {
     }
 
 
+    //Merge Two sorted lists
     public static linkedlist mergeTwoSortedList(linkedlist first, linkedlist second){
         Node f = first.head;
         Node s = second.head;
@@ -201,7 +203,7 @@ public class linkedlist {
 
 
     //Length of a cycle in a linked list
-    public int CycleLength(Node head) {
+    public int findCycleLength(Node head) {
         Node fast = head;
         Node slow = head;
         while(fast != null && fast.next != null){
