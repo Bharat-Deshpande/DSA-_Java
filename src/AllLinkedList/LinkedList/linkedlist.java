@@ -1,6 +1,4 @@
-package LinkedList;
-
-import java.util.LinkedList;
+package AllLinkedList.LinkedList;
 
 public class linkedlist {
 
@@ -189,7 +187,7 @@ public class linkedlist {
 
     }
 
-    //LinkedList cycle detection
+    //AllLinkedList.LinkedList cycle detection
     public boolean hasCycle(Node head) {
         Node fast = head;
         Node slow = head;

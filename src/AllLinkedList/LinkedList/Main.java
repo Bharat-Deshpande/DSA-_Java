@@ -1,6 +1,4 @@
-package LinkedList;
-
-import java.util.HashMap;
+package AllLinkedList.LinkedList;
 
 public class Main{
      public static void main(String[] args) {
