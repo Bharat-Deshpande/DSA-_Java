@@ -38,6 +38,15 @@ public class CustomImplemnetation {
         return data[ptr--];
     }
 
+    public void display(){
+        if(isEmpty()){
+            System.out.println("The stack is empty");
+        }
+        for(int i = 0; i<data.length;i++){
+            System.out.println(data[i]);
+        }
+    }
+
     public int peek() throws StackException{
         if(isEmpty()){
             throw new StackException("Cannot peek from an empty stack");
