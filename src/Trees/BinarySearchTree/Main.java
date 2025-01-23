@@ -1,7 +1,15 @@
 package Trees.BinarySearchTree;
 
-public class Main {
-    public static void main(String[] args) {
 
+import org.w3c.dom.ls.LSOutput;
+
+
+public class Main {
+
+    public void anni(){
+        System.out.println("Anni");
     }
+
 }
+
+
