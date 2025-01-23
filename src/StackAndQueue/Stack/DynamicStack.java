@@ -2,6 +2,7 @@ package StackAndQueue.Stack;
 
 public class DynamicStack extends CustomImplemnetation{
     public DynamicStack() {
+
         super(); // it will call CustomStack
     }
     public DynamicStack(int size){

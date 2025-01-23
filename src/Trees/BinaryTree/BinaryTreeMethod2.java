@@ -1,14 +1,5 @@
 package Trees.BinaryTree;
 
-class Node {
-    int value;
-    Node left, right;
-
-    public Node(int item) {
-        value = item;
-        left = right = null;
-    }
-}
 public class BinaryTreeMethod2 {
     Node root;
 
@@ -58,6 +49,7 @@ public class BinaryTreeMethod2 {
 
 
 
+
     public static void main(String[] args) {
         BinaryTreeMethod2 tree = new BinaryTreeMethod2();
 
@@ -75,5 +67,15 @@ public class BinaryTreeMethod2 {
 
         System.out.println("\nPostorder traversal:");
         tree.postOrderTraversal();
+    }
+
+    static class Node {
+        int value;
+        Node left, right;
+
+        public Node(int item) {
+            value = item;
+            left = right = null;
+        }
     }
 }
