@@ -10,6 +10,7 @@ public class CustomImplemnetation {
 
 
     public CustomImplemnetation(){
+
         this(DEFAULT_SIZE);
     }
 
