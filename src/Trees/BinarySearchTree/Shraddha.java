@@ -165,11 +165,11 @@ public class Shraddha {
 //            System.out.println("Not Found");
 //        }
 
-//        delete(root, 5);
-//        inorder(root);
+        delete(root, 5);
+        inorder(root);
 //
 //        printInRange(root, 3, 12);
 
-        printRootToLeaf(root, new ArrayList<>());
+//        printRootToLeaf(root, new ArrayList<>());
     }
 }
