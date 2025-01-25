@@ -64,6 +64,6 @@ public class Node{
         if(value>node.value){
             node.right = insert(value, node.right);
         }
-
+        return node;
     }
 }
