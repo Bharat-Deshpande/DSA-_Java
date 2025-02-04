@@ -17,6 +17,7 @@ public class KadaneAlgorithm {
 
         }
         return max;
+
     }
     public static void main(String[] args) {
 
