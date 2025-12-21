@@ -4,7 +4,7 @@ import java.util.*;
 
 import java.util.*;
 
-class Solution {
+class Solution1{
     // DFS function to detect cycle
     private boolean dfs(int node, int parent, ArrayList<ArrayList<Integer>> adj, boolean[] visited) {
         // Mark current node visited
@@ -60,7 +60,7 @@ public class DetectCycleUsingDFS {
         adj.get(4).add(3);
         adj.get(4).add(1);
 
-        Solution sol = new Solution();
+        Solution1 sol = new Solution1();
         if (sol.isCycle(V, adj))
             System.out.println("Cycle detected");
         else
